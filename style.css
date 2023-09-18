@@ -1,8 +1,8 @@
 
+/* Overall code for the layout */
 body {
     margin: 0;
-    padding-left: 150px;
-    padding-right: 150px;
+    
 }
 
 h2 {
@@ -22,8 +22,11 @@ h1, p {
 
 }
 
+/* Code for the header, text and links */
+
 .header {
-    padding: 24px;
+    padding-left: 150px;
+    padding-right: 150px;
     background: #1F2937;
     justify-content: space-between;
     align-items: center;
@@ -65,25 +68,31 @@ li a {
     margin-right: 8px;
     color: #E5E7EB;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
+/* Box 1 is the box for the image and the overall sites main text, with some text explaining under*/
+
 .box1 {
+    padding: 20px 150px 20px 150px;
     display: flex;
     justify-content: center;
-    padding: 20px;
     background: #1F2937;
 }
 
+/* Place one is the main text for the site and the description under*/
+
 .place1 {
-    display: flex;
-    flex-basis: 30%;
     background: #ccc;
-    padding: 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+}
 
+.place1, .place2 {
+    display: flex;
+    flex-basis: 30%;
+    padding: 20px;
+    flex-direction: column; 
 }
 
 .text-placeholder {
@@ -102,16 +111,16 @@ li a {
     background: #E5E7EB;
 }
 
+/* place 2 is the placeholder for the image in box 1*/
+
 .place2 {
-    flex-basis: 30%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
     text-align: left;
     padding-right: 55px;
     color: white;
     gap: 10px;
 }
+
+/* singup1 is the first signup button in box 1*/
 
 .signup1 {
     height: 40px;
@@ -126,12 +135,16 @@ li a {
 
 .signup1:hover {
     background-color: #E5E7EB;
+    color: #1F2937;
+    border: #1F2937;
 }
 
 .signup1:focus {
     outline: none; 
     box-shadow: 0 0 2px 2px #E5E7EB;
 }
+
+/* Box 2 consissts of a title and a row off images*/
 
 .box2 {
     padding: 60px;
@@ -145,10 +158,12 @@ li a {
     justify-content: center;
     color: #1F2937;
     padding: 55px;
-    padding-top: -20px;
+    padding-top: 0;
     font-size: 24px;
     font-weight: bold;
 }
+
+/* Container for all images giving overall instructions for the images */
 
 .all-images-container {
     justify-content: space-between;
@@ -156,13 +171,15 @@ li a {
     flex-wrap: wrap;
 }
 
+/* image-comtainer describes the individual boxes overall behavior */
+
 .image-container {
     justify-content: space-between;
     padding: 10px;
     flex-basis: calc(15% - 30px);
     border: 3px solid #0078d4;
     text-align: center;
-    height: 150px;
+    height: 200px;
     flex-direction: column;
     margin-bottom: 20px;
     align-items: center;
@@ -175,6 +192,8 @@ li a {
     height: auto;
     font-size: 12px;
 }
+
+/* image-caption is for the captions of each image container */
 
 .image-caption {
     color: #333;
@@ -190,24 +209,29 @@ li a {
     padding-bottom: 24px;
 }
 
+/* box3 consists of a inner box and a quote and a author name */
+
 .box3 {
+    padding-left: 150px;
+    padding-right: 150px;
     background-color: #E5E7EB;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* box3-inner describes the behavior for the quote and author name */
+
 .box3-inner {
-    
-    justify-content: center;
+    flex: 1;
     padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 400px;
     padding-right: 400px;
-    
 }
 
 .quote {
+    word-wrap: break-word;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 24px;
     font-style: italic;
@@ -226,3 +250,68 @@ li a {
     padding-right: 40px;
 }
 
+/* box4 consists of two inner boxes to describe the behavior of the text in inne-box
+and the secound signup button in inner-box2 */
+
+.box4 {
+    display: flex;
+    padding: 150px 100px 150px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-box {
+    flex: 1;
+    padding: 50px 100px 50px 100px;
+    border: 2px black;
+    background-color: #3882F6;
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: left;
+}
+
+.inner-box2 {
+    text-align: right;
+}
+
+.inner-box-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.inner-box-text, .inner-box-text2 {
+    color: white;
+}
+
+.inner-box-text2 {
+    font-size: 12px;
+}
+
+.signup-button2 {
+ background-color: #3882F6;
+ color: white;
+ padding: 15px 30px 15px 30px;
+ border: 2px solid white;
+ border-radius: 5px;
+}
+
+.signup-button2:hover {
+    background-color: white;
+    color: #3882F6;
+    border: 2px bold black;
+}
+
+/* the footer class describes the behavior of the text in the footer */
+
+.footer {
+    background-color: #1F2937;
+    display: flex;
+}
+
+.footer-text {
+    flex: 1;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
